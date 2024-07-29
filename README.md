@@ -67,15 +67,3 @@ curl -X GET -H "Authorization: Token <token>" http://localhost:8000/api/v1/marke
 ```sh
 curl -X POST -H "Authorization: Token <token>" -d '{"foo": "bar"}' http://localhost:8000/api/v1/marketing-counter-create/
 ```
-
-## VPS
-
-```sh
-https://vm.megahost.kz/
-
-# ip address
-45.136.59.93
-
-# login password
-root: FC4B63fF4Gm8
-```
