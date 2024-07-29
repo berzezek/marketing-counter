@@ -14,7 +14,7 @@ services:
       dockerfile: compose/local/Dockerfile
     container_name: local-backend-web-1
     ports:
-      - '8000:8000'
+      - '80:8000'
     depends_on:
       - mysql-db
     env_file:
