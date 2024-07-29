@@ -8,15 +8,15 @@ cp env.local .env
 ```
 
 ```sh
-# build and run the project
-docker compose up --build -t
+# local build and run the project
+docker compose -f compose/local/docker-compose.yaml up --build
 ```
 
 ## Usage
 
 ```sh
 # run the project
-docker compose up
+docker compose up -d
 ```
 
 ## Authorizations

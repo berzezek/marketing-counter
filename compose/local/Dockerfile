@@ -5,8 +5,7 @@ FROM python:3.9-slim
 WORKDIR /app
 
 # Устанавливаем figlet
-RUN apt-get update && apt-get install -y figlet default-libmysqlclient-dev
-
+RUN apt-get update && apt-get install -y figlet build-essential python3-dev libmariadb-dev libmariadb-dev-compat
 # Копируем requirements.txt и устанавливаем зависимости
 COPY backend/requirements.txt /app/
 RUN pip install --upgrade pip
