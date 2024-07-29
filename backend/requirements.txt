@@ -6,5 +6,11 @@ django-appconf==1.0.6
 django-cors-headers==4.4.0
 django-cryptography==1.1
 djangorestframework==3.15.2
+environs==11.0.0
+marshmallow==3.21.3
+mysqlclient==1.4.6
+packaging==24.1
 pycparser==2.22
+python-dotenv==1.0.1
 sqlparse==0.5.1
+supertools==1.0.1
