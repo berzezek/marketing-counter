@@ -1,10 +1,10 @@
 # Marketing counter
 
-## Instalation
+## Development
 
 ```sh
 # copy env.local to .env
-cp env.local .env
+cp env.local .env.local
 ```
 
 ```sh
@@ -12,11 +12,16 @@ cp env.local .env
 docker compose -f compose/local/docker-compose.yaml up --build
 ```
 
-## Usage
+## Production
 
 ```sh
-# run the project
-docker compose up -d
+# copy env.local to .env.prod
+cp env.prod .env.prod
+```
+
+```sh
+# production build and run the project
+docker compose -f compose/prod/docker-compose.yaml up --build -d
 ```
 
 ## Authorizations

@@ -7,15 +7,22 @@ WORKDIR /app
 # Устанавливаем figlet и другие зависимости
 RUN apt-get update && apt-get install -y \
     figlet \
+    build-essential \
+    python3-dev \
+    libmariadb-dev \
+    libmariadb-dev-compat \
+    netcat-openbsd \
+    gettext-base \
     && apt-get clean
 
 # Копируем requirements.txt и устанавливаем зависимости
-COPY backend/requirements.local.txt /app/
+COPY backend/requirements.txt /app/
 RUN pip install --upgrade pip
-RUN pip install --no-cache-dir -r requirements.local.txt
+RUN pip install --upgrade setuptools
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Копируем необходимые файлы в контейнер
 COPY backend /app/
 
 # Указываем команду для запуска
-CMD ["python", "manage.py", "runserver"]
+CMD ["sh", "start.sh"]
