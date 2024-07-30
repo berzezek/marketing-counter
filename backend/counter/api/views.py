@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from counter.models import MarketingCounter
 from counter.api.serializers import MarketingCounterSerializer
 
-# logger = logging.getLogger('msb')
+logger = logging.getLogger('msb')
 
 
 @api_view(['GET'])
@@ -18,7 +18,7 @@ def marketing_counter_list(request):
         serializer = MarketingCounterSerializer(marketing_counters, many=True)
         return Response(serializer.data)
     except Exception as e:
-        # logger.error(e)
+        logger.error(e)
         return Response({"message": "No marketing counters found"})
 
 @api_view(['POST'])
@@ -32,5 +32,5 @@ def marketing_counter_create(request):
             serializer.save()
         return Response(serializer.data)
     except Exception as e:
-        # logger.error(e)
+        logger.error(e)
         return Response({"message": "Error creating marketing counter"})

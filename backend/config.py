@@ -19,7 +19,7 @@ ALLOW_ALL_ORIGINS = env.bool('ALLOW_ALL_ORIGINS', False)
 # Database
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql',
+        'ENGINE': 'mysql.connector.django',
         'NAME': env('MYSQL_DATABASE', 'counter'),
         'USER': env('MYSQL_USER', 'user'),
         'PASSWORD': env('MYSQL_PASSWORD', 'password'),

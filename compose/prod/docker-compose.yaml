@@ -1,7 +1,7 @@
 services:
   mysql-db:
     container_name: mysql-container
-    image: mariadb:11.5.1-ubi9-rc
+    image: mysql:8.0
     restart: always
     command: mysqld --default-authentication-plugin=caching_sha2_password
     env_file:
